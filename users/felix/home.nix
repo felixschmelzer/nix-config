@@ -4,7 +4,7 @@
   imports = [
     ../../home/core.nix
     
-    ../../home/programs
+    ../../home/programs.nix
   ];
 
   
