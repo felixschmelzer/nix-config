@@ -8,6 +8,7 @@
   imports =
     [ 
       ../../modules/system.nix
+      ../../modules/hyprland.nix
       
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
@@ -33,45 +34,8 @@
 
 
 
-  #TODO move!!
-  # Enable Hyprland
-  programs.hyprland.enable = true;
- 
-  # Enable Login with greetd
-  services.greetd = {
-    enable = true;
-    settings = rec {
-      initial_session = {
-        command = "${pkgs.hyprland}/bin/hyprland";
-        user = "${username}";
-      };
-      default_session = initial_session;
-    };
-  }; 
-
-
-  # To enable Screensharing... with hyperland
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-
-
-
   # Configure console keymap
   console.keyMap = "de";
-
-
-
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-
 
 
 
