@@ -2,9 +2,6 @@
 { config, pkgs, username, ... }:
 
 {
-
-
-
   environment.systemPackages = with pkgs; [
     # Hyprland Setup
     kdePackages.qtwayland

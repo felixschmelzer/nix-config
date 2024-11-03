@@ -7,7 +7,10 @@
 {
   imports =
     [ 
+      # Include Basic Systemconfig
       ../../modules/system.nix
+
+      # Use Hyprland
       ../../modules/hyprland.nix
       
       # Include the results of the hardware scan.

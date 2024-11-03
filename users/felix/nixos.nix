@@ -7,6 +7,7 @@
 
   users.users.felix = {
     openssh.authorizedKeys.keys = [
+      "./ssh/authorized_keys"
     ];
   };
 }
