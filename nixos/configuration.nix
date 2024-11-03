@@ -118,7 +118,7 @@
 
     # Add ssh key fpr user   
     openssh.authorizedKeys.keyFiles = [
-    #  ./ssh/authorized_keys
+      ./ssh/authorized_keys
     ];
   };
 
