@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, username, ... }:
 
 {
 
@@ -20,43 +20,70 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
-    # here is some command line tools I use frequently
-    # feel free to add your own or remove some of them
-
-    nnn # terminal file manager
-
-    # nix related
-    #
-    # it provides the command `nom` works just like `nix`
-    # with more details log output
-    nix-output-monitor
-
-    # productivity
-     glow # markdown previewer in terminal
-
+    # Monitoring
     btop  # replacement of htop/nmon
     iotop # io monitoring
     iftop # network monitoring
- 
-    # system tools
-    sysstat
-    lm_sensors # for `sensors` command
-    ethtool
-    pciutils # lspci
-    usbutils # lsusb
+
+    # Archives
+    unzip
+    zip
+
+    # File Browsers
+    dolphin
+    mc
+
+    # Terminal
+    kitty
+
+    # Utils
+    tree
+    neofetch
+
+    # Docker
+    docker-compose
 
     # My
     discord
     webex
     spotify
 
-    # Equalizer
+    # Sound
+    playerctl
     easyeffects
     cava
-    
 
+    # Networkmanager app
+    networkmanagerapplet
+    
+    # IDE
     vscode
+
+
+
+
+
+    # Hyprland Setup
+     kdePackages.qtwayland
+    kdePackages.qtsvg
+    waybar
+    # Push notifications
+    dunst
+    # Needed for dunst
+    libnotify
+    # "launcher" like thing
+    rofi-wayland
+    # Wallpapers
+    swww
+    # Lockscreen
+    hyprlock
+    # Clipboard Manager
+    cliphist
+    wl-clipboard
   ];
+
+
+
 
 
   # Install firefox

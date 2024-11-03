@@ -60,38 +60,6 @@
   console.keyMap = "de";
 
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    docker-compose
-    htop
-    tree
-    dolphin
-    kdePackages.qtwayland
-    kdePackages.qtsvg
-    waybar
-    # Push notifications
-    dunst
-    # Needed for dunst
-    libnotify
-    # "launcher" like thing
-    rofi-wayland
-    # Wallpapers
-    swww
-    # Networkmanager app
-    networkmanagerapplet
-    # Midnight Commander
-    mc
-    # Media controll
-    playerctl
-    # Lockscreen
-    hyprlock
-    # Clipboard Manager
-    cliphist
-    wl-clipboard
-
-  ];
-
 
 
   # Some programs need SUID wrappers, can be configured further or are

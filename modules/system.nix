@@ -85,13 +85,9 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    home-manager
     vim
     wget
     git
-    unzip
-    neofetch
-    kitty
   ];
 
   # Install Fonts
