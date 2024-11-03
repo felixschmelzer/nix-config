@@ -4,7 +4,7 @@
 
 # initialize wallpaper daemon and set wallpaper
 swww init &
-swww img ~/Pictures/wal.png &
+swww img ~/.config/hypr/wal.png &
 
 
 nm-applet --indicator &

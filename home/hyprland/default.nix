@@ -9,7 +9,13 @@
 
   home.file.".config/hypr" = {
     source = ./hypr;
-    # copy the scripts directory recursively
+    recursive = true;
+    executable = true;  # make all scripts executable
+  };
+
+
+  home.file.".config/waybar" = {
+    source = ./waybar;
     recursive = true;
     executable = true;  # make all scripts executable
   };
