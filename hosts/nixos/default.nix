@@ -17,13 +17,14 @@
       ./hardware-configuration.nix
     ];
 
+  # Define your hostname.
+  networking.hostName = "nixos";
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.configurationLimit = 10;
-
-
-  networking.hostName = "nixos"; # Define your hostname.
+  
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
